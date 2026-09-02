@@ -47,4 +47,14 @@ api.interceptors.response.use(
   }
 );
 
+export const forgotPassword = async (email) => {
+  const response = await api.post('/auth/forgot-password', { email });
+  return response.data;
+};
+
+export const resetPassword = async (id, token, newPassword) => {
+  const response = await api.post(`/auth/reset-password/${id}/${token}`, { newPassword });
+  return response.data;
+};
+
 export default api;
