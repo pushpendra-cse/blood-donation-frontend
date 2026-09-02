@@ -37,7 +37,7 @@ const Navbar = () => {
         {/* Brand Logo */}
         <Link to="/" className="brand-logo" onClick={closeMenu}>
           <Droplet className="blood-icon" fill="currentColor" size={28} />
-          <span>LifeBlood <small style={{ fontSize: '0.75rem', fontWeight: 500, color: 'var(--text-muted)' }}>Portal</small></span>
+          <span>LifeBlood</span>
         </Link>
 
         {/* Desktop Navigation Links */}
