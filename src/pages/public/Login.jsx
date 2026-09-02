@@ -41,8 +41,8 @@ const Login = () => {
   // Quick-fill credentials helper for college demonstration/viva
   const quickFill = (demoRole) => {
     if (demoRole === 'admin') {
-      setEmail('admin@blooddonation.com');
-      setPassword('admin123');
+      setEmail('');
+      setPassword('');
     } else if (demoRole === 'donor') {
       setEmail('donor@blooddonation.com');
       setPassword('donor123');
@@ -91,7 +91,7 @@ const Login = () => {
           <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 600, color: 'var(--secondary)', marginBottom: '8px' }}>
             <Sparkles size={14} color="var(--primary)" /> Demo Test Logins (Click to Autofill):
           </div>
-          <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+          {/* <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
             <button
               type="button"
               onClick={() => quickFill('admin')}
@@ -116,7 +116,7 @@ const Login = () => {
             >
               🏥 Receiver
             </button>
-          </div>
+          </div> */}
         </div>
 
         <form onSubmit={handleSubmit}>
