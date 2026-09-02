@@ -17,7 +17,6 @@ import FindBlood from './pages/public/FindBlood';
 import BecomeDonor from './pages/public/BecomeDonor';
 import NotFound from './pages/public/NotFound';
 import ForgotPassword from './pages/public/ForgotPassword';
-import ResetPassword from './pages/public/ResetPassword';
 
 // Donor Pages
 import DonorDashboard from './pages/donor/DonorDashboard';
@@ -57,7 +56,6 @@ function App() {
               <Route path="/find-blood" element={<FindBlood />} />
               <Route path="/become-donor" element={<BecomeDonor />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
-              <Route path="/reset-password/:id/:token" element={<ResetPassword />} />
 
               {/* Donor Portal Protected Routes */}
               <Route
