@@ -10,6 +10,7 @@ const ForgotPassword = () => {
   const [email, setEmail] = useState('');
   const [otp, setOtp] = useState('');
   const [newPassword, setNewPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
@@ -36,6 +37,12 @@ const ForgotPassword = () => {
     e.preventDefault();
     setError('');
     setMessage('');
+
+    if (newPassword !== confirmPassword) {
+      setError('Passwords do not match');
+      return;
+    }
+
     setLoading(true);
 
     try {
@@ -133,6 +140,20 @@ const ForgotPassword = () => {
                   placeholder="Enter new password"
                   value={newPassword}
                   onChange={(e) => setNewPassword(e.target.value)}
+                />
+              </div>
+            </div>
+
+            <div className="form-group">
+              <label className="form-label required">Confirm New Password</label>
+              <div style={{ position: 'relative' }}>
+                <input
+                  type="password"
+                  className="form-control"
+                  required
+                  placeholder="Confirm new password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
                 />
               </div>
             </div>
